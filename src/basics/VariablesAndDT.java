@@ -1,3 +1,5 @@
+package basics;
+
 public class VariablesAndDT {
     public static void main(String[] args) {
         // variables
