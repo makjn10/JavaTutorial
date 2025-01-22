@@ -3,7 +3,10 @@ package basics;
 public class VariablesAndDT {
     public static void main(String[] args) {
         // variables
-        int age = 26;
+        // variable in java is basically a reference to the location of data
+        // that variable stores the address where the data is stored and each time that variable is used it gives the value of the data at that address
+
+        int age = 26; // declaration and initialization
         System.out.println(age);
         age = 56;
         System.out.println(age);
