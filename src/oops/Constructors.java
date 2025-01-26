@@ -44,6 +44,10 @@ class Complex {
 		this.b = b;
 	}
 
+	Complex(int a) {
+		this(a, 0); // call to another constructor using this should be the first line
+	}
+
 	void print() {
 		System.out.println(a + " + " + b + "i");
 	}
