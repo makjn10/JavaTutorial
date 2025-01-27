@@ -23,6 +23,11 @@ public class Person {
 	// non-static variables/methods cannot be used in static methods -> Compile time error
 	static int count = 0; // can be accessed as Person.count
 
+	// static block is run first, even before the m ain method call
+	static {
+		System.out.println("From Person class");
+	}
+
 	private final int age;
 	private final String name;
 
