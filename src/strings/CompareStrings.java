@@ -11,7 +11,7 @@ public class CompareStrings {
 
 		System.out.println("name and name2 are same : " + (name == name2));
 		System.out.println("name and name3 are same : " + (name == name3));
-		// In case of OBJECTS, == compares the reference addresses that the variable is storing, actual value is not compared
+		// In case of OBJECTS (even with Integers, Double wrapper objects etc.), == compares the reference addresses that the variable is storing, actual value is not compared
 		// to compare values, use equals method. Internally equals method compare the hash of the object which we will learn later
 
 		System.out.println("name and name2 are equal : " + (name.equals(name2)));
