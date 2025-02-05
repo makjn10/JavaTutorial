@@ -133,6 +133,31 @@ public class ArrayListMain {
 
 		fruits.sort((s1, s2) -> s1.length() - s2.length());
 		System.out.println(fruits);
+
+
+		List<Student> students = new ArrayList<>();
+		students.add(new Student("Alice", 3.5));
+		students.add(new Student("Bob", 3.7));
+		students.add(new Student("Abby", 3.5));
+		students.add(new Student("Dhruv", 3.9));
+
+		// Collections.sort(students); // gives compilation error
+
+		// students.sort(null); // gives error as Java doesn't know natural ordering for Student
+		// With String it implements Comparable interface which tells how to compare two strings by default
+
+		System.out.println(students);
+		students.sort((a, b) -> {
+			if (a.getGpa() > b.getGpa())	return -1;
+			else if (a.getGpa() < b.getGpa())	return 1;
+			return 0;
+		});
+		System.out.println(students);
+
+		Comparator<Student> comparator = Comparator.comparing(Student::getGpa).reversed().thenComparing(Student::getName);
+		students.sort(comparator);
+
+		System.out.println(students);
 	}
 }
 
@@ -147,5 +172,28 @@ class MyComparator implements Comparator<Integer> {
 	@Override
 	public int compare(Integer o1, Integer o2) {
 		return o2 - o1;
+	}
+}
+
+class Student {
+	private String name;
+	private double gpa;
+
+	public Student(String name, double gpa) {
+		this.name = name;
+		this.gpa = gpa;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getGpa () {
+		return gpa;
+	}
+
+	@Override
+	public String toString() {
+		return "{ " + name + ", " + gpa + " }";
 	}
 }
