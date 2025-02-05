@@ -28,6 +28,8 @@ public class VectorMain {
 		System.out.println(vector3.capacity());
 		System.out.println(vector3);
 
+		// Thread Safety
+
 		ArrayList<Integer> list = new ArrayList<>();
 		Thread t1 = new Thread(() -> {
 			for (int i = 0; i < 1000; i++) {
