@@ -3,6 +3,7 @@ package collections.engineeringDigest.Map;
 import java.util.HashMap;
 import java.util.Map;
 
+// not thread-safe
 public class HashMapMain {
 	public static void main(String[] args) {
 
@@ -44,6 +45,12 @@ public class HashMapMain {
 		// 20 is initial capacity and 0.5 is load factor
 		// Thus HashMap internal array will resize after 0.5 * 20 = 10 elements
 
+
+		System.out.println(map.getOrDefault(8, "NULL"));
+		map.putIfAbsent(8, "Shubham");
+		System.out.println(map.getOrDefault(8, "NULL"));
+		map.putIfAbsent(3, "Mayank");
+		System.out.println(map.getOrDefault(3, "NULL"));
 
 	}
 }
