@@ -1,7 +1,6 @@
 package collections.engineeringDigest.Map;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class HashMapMain {
@@ -39,6 +38,11 @@ public class HashMapMain {
 		System.out.println(map);
 		System.out.println(map.remove(3, "Alice"));
 		System.out.println(map);
+
+
+		HashMap<Integer, String> map1 = new HashMap<>(20, 0.5f);
+		// 20 is initial capacity and 0.5 is load factor
+		// Thus HashMap internal array will resize after 0.5 * 20 = 10 elements
 
 
 	}
